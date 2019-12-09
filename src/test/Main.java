@@ -89,7 +89,7 @@ public class Main {
 
     public static void addAnotation(List<String> content) {
         //第一行是package
-        content.add(1, "import lombok.SuperBuilder;");
+        content.add(1, "import lombok.experimental.SuperBuilder;");
 
         for (int i = 0; i < content.size(); i++) {
             if (content.get(i).trim().startsWith("@")) {
