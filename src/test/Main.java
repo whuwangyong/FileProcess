@@ -92,6 +92,10 @@ public class Main {
         content.add(1, "import lombok.experimental.SuperBuilder;");
 
         for (int i = 0; i < content.size(); i++) {
+            if (content.get(i).replace(" ", "").startsWith("publicclass")) {
+                //仅查找构造函数之前的@注解
+                return;
+            }
             if (content.get(i).trim().startsWith("@")) {
                 content.add(i, "@SuperBuilder");
                 break;
