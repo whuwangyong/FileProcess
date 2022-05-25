@@ -1,9 +1,7 @@
-[toc]
 
 本项目是一些学习java语言的测试代码。包含多个模块，如无特殊说明，每个模块是单独的示例，可独立运行。
 
 ## base
-
 一些java基本特性的测试：
 
 - Exception
@@ -18,7 +16,6 @@
 - ...
 
 ## spring-ioc-interface
-
 后端在提供服务时，如果一个interface有多个implementations，根据不同的参数类型，调用不同的implementation，应该怎么做。
 
 Spring 可以自动注入该interface的各种实现，key为beanName，value为bean。
@@ -27,14 +24,11 @@ Spring 可以自动注入该interface的各种实现，key为beanName，value为
 @Autowired
 Map<String, Query> queryMap;
 ```
-
-## jackson-localdatetime
-
-SpringBoot默认的json序列化使用的是jackson，该实例测试LocalDateTime在jackson中的处理
-
 ### Reference:
-
 1. [spring-boot-autowiring-an-interface-with-multiple-implementations](https://stackoverflow.com/questions/51766013/spring-boot-autowiring-an-interface-with-multiple-implementations)
 2. [dynamic-dependency-injection-for-multiple-implementations-of-the-same-interface](https://stackoverflow.com/questions/53273923/dynamic-dependency-injection-for-multiple-implementations-of-the-same-interface)
+
+## jackson-localdatetime
+SpringBoot默认的json序列化使用的是jackson，该实例测试LocalDateTime在jackson中的处理
 
 
