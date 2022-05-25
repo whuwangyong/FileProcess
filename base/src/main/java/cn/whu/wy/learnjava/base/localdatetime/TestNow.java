@@ -1,4 +1,4 @@
-package cn.whu.wy.learnjava.base;
+package cn.whu.wy.learnjava.base.localdatetime;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -6,12 +6,12 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * 注意：LocalDateTime.now()在openjdk8和11上返回的精度不一致
- *
+ * <p>
  * Author WangYong
  * Date 2020/08/26
  * Time 16:58
  */
-public class LocalDateTimeTest {
+public class TestNow {
 
     LocalDateTime t1 = LocalDateTime.of(2020, 8, 26, 16, 0, 0);
     LocalDateTime t2 = LocalDateTime.of(2020, 8, 26, 16, 5, 0);
@@ -20,7 +20,7 @@ public class LocalDateTimeTest {
     LocalDateTime t5 = LocalDateTime.of(2020, 8, 26, 16, 5, 5, 125_000_000);
 
     public static void main(String[] args) {
-        LocalDateTimeTest test = new LocalDateTimeTest();
+        TestNow test = new TestNow();
         test.testToString();
         test.localTimeTest();
         test.getFormatedTimeStamp();
