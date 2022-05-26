@@ -13,6 +13,7 @@
 - jdbc 不使用jdbcTemplate、jpa、Mybatis等等，使用原始的jdbc操作数据库
 - lambda 表达式
 - 多线程
+- 继承与组合  
 - ...
 
 ## spring-ioc-interface
