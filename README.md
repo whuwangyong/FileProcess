@@ -14,6 +14,7 @@
 - lambda 表达式
 - 多线程
 - 继承与组合  
+- utils.log：实现了一个简单的异步打印日志的方法。涉及到获取调用者的className、打印固定长度的字符串等技巧
 - ...
 
 ## spring-ioc-interface
