@@ -1,6 +1,6 @@
 package cn.whu.wy.learnjava.base.utils.log;
 
-import cn.whu.wy.learnjava.base.utils.log.impl.BetterLog;
+import cn.whu.wy.learnjava.base.utils.log.impl.BetterLogger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,11 +14,11 @@ import java.lang.reflect.Method;
  */
 public class TestBetterLog {
 
-    BetterLog betterLog;
+    BetterLogger betterLog;
 
     @BeforeEach
     public void setUp() {
-        betterLog = new BetterLog();
+        betterLog = new BetterLogger();
     }
 
     @Test

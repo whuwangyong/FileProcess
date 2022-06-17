@@ -1,7 +1,7 @@
 package cn.whu.wy.learnjava.base;
 
-import cn.whu.wy.learnjava.base.utils.log.Log;
-import cn.whu.wy.learnjava.base.utils.log.impl.BetterLog;
+import cn.whu.wy.learnjava.base.utils.log.Logger;
+import cn.whu.wy.learnjava.base.utils.log.impl.BetterLogger;
 
 import java.util.concurrent.Executors;
 
@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
  */
 public class ExceptionTest {
 
-    private static Log log = new BetterLog();
+    private static Logger log = new BetterLogger();
 
     public static void main(String[] args) {
         ExceptionTest exceptionTest = new ExceptionTest();

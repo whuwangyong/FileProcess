@@ -1,7 +1,7 @@
 package cn.whu.wy.learnjava.base.lock;
 
-import cn.whu.wy.learnjava.base.utils.log.Log;
-import cn.whu.wy.learnjava.base.utils.log.impl.BetterLog;
+import cn.whu.wy.learnjava.base.utils.log.Logger;
+import cn.whu.wy.learnjava.base.utils.log.impl.SimpleLogger;
 import lombok.SneakyThrows;
 
 import java.util.concurrent.TimeUnit;
@@ -14,7 +14,7 @@ public class BizRunnable implements Runnable {
 
     final Object pauseLock = new Object();
     volatile boolean pause = false;
-    Log log = new BetterLog();
+    Logger log = new SimpleLogger();
 
     @SneakyThrows
     @Override

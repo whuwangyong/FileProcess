@@ -1,7 +1,7 @@
 package cn.whu.wy.learnjava.base.thread;
 
-import cn.whu.wy.learnjava.base.utils.log.Log;
-import cn.whu.wy.learnjava.base.utils.log.impl.BetterLog;
+import cn.whu.wy.learnjava.base.utils.log.Logger;
+import cn.whu.wy.learnjava.base.utils.log.impl.BetterLogger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
  * Time 10:59
  */
 public class ServiceRegistry {
-    private Log log = new BetterLog();
+    private Logger log = new BetterLogger();
     private Map<ExecutorService, Service> serviceList = new HashMap<>();
 
     public void regist(ExecutorService executorService, Service service) {
