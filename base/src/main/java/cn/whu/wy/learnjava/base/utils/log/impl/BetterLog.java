@@ -48,12 +48,13 @@ public class BetterLog implements Log {
 
     private String getCallerClassName() {
         // way 1：
-        // String callerClassName = new Exception().getStackTrace()[1].getClassName();
+         String callerClassName = new Exception().getStackTrace()[2].getClassName();
         // String calleeClassName = new Exception().getStackTrace()[0].getClassName();
+        return callerClassName;
 
         // way 2：
-        StackWalker walker = StackWalker.getInstance(RETAIN_CLASS_REFERENCE);
-        return walker.getCallerClass().getName();
+//        StackWalker walker = StackWalker.getInstance(RETAIN_CLASS_REFERENCE);
+//        return walker.getCallerClass().getName();
     }
 
     /**
