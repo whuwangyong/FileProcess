@@ -3,4 +3,5 @@ include 'spring-ioc-interface'
 include 'base'
 include 'jackson-localdatetime'
 include 'spring-web-async'
+include 'serialization'
 
