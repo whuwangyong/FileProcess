@@ -11,7 +11,6 @@ import java.util.function.Consumer;
 
 
 /**
- * 测试结果，只有t1方法可用
  * 参考资料：
  * 1. https://mkyong.com/java/how-to-execute-shell-command-from-java/
  * 2. https://www.baeldung.com/run-shell-command-in-java
@@ -22,9 +21,24 @@ public class ShellExecutor {
     public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
         String[] cmd = new String[]{"sshpass", "-p", "1", "ssh", "-o", "StrictHostKeyChecking=no", "wy@127.0.0.1",
                 "egrep", "-v", "\"^import|^package\"", "/home/wy/RuntimeDemo.java"};
-        t1(cmd);
-        t2(cmd);
-        t3(cmd);
+        if (args[0].equals("1")) {
+            t1(cmd);
+            t1(cmd);
+        }
+        if (args[0].equals("2")) {
+            t2(cmd);
+            t2(cmd);
+        }
+        if (args[0].equals("3")) {
+            t3(cmd);
+            t3(cmd);
+        }
+
+        if (args[0].equals("0")) {
+            t1(cmd);
+            t2(cmd);
+            t3(cmd);
+        }
 
     }
 
@@ -65,9 +79,9 @@ public class ShellExecutor {
             if (exitVal == 0) {
                 System.out.println("t1 success!");
                 System.out.println(output);
-                System.exit(0);
+//                System.exit(0);
             } else {
-                System.out.println("t3 fail, code=" + exitVal);
+                System.out.println("t1 fail, code=" + exitVal);
                 System.out.println(output);
             }
 
@@ -94,7 +108,7 @@ public class ShellExecutor {
             if (exitVal == 0) {
                 System.out.println("t2 success!");
                 System.out.println(output);
-                System.exit(0);
+//                System.exit(0);
             } else {
                 System.out.println("t2 fail, code=" + exitVal);
             }
