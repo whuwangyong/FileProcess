@@ -26,10 +26,7 @@ public class User {
     }
 
     public User fromBytes(byte[] bytes) {
-        ByteBuffer bf = ByteBuffer.wrap(bytes);
-        User user = new User();
-        user.setId(bf.getLong());
-        user.setName(bf.get());
+        return null;
     }
 
     public long getId() {
