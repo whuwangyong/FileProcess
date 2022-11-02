@@ -16,6 +16,7 @@
 - 继承与组合  
 - utils.log：实现了一个简单的异步打印日志的方法。涉及到获取调用者的className、打印固定长度的字符串等技巧
 - lock.LockTest：测试了synchronized block 提供的内置锁。wait()方法会释放锁，sleep()不会
+- multiextend：通过接口实现多继承，但是在其中一个父类对象强转为子类时会报ClassCastException。因为子类组合了多个父类的能力，任一单个父类对象都没有其他父类对象的能力，所以不能强转。
 - ...
 
 ## spring-ioc-interface
